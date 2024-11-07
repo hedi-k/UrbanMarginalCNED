@@ -18,7 +18,7 @@ public class EntreeJeu extends JPanel {
     //Propriétés:
     private JFrame frmEntreeJeu;
     //Largeur de la fenêtre.
-    private int windowWith = 400;
+    private int windowWidth = 400;
     //Hauteur de la fenêtre.
     private int windowHeight = 200;
     //Zone de saisie de l'@ ip.
@@ -31,7 +31,7 @@ public class EntreeJeu extends JPanel {
         // IMPORTANT Ajout d'un gestionnaire de mise en page IMPORTANT
         frmEntreeJeu.setLayout(null);
         //Dimensionne la fenêtre.
-        frmEntreeJeu.setSize(windowWith, windowHeight);
+        frmEntreeJeu.setSize(windowWidth, windowHeight);
         //Position de la fenêtre au centre de l'écran.
         frmEntreeJeu.setLocationRelativeTo(null);
         //Empêche de modifier la taille de la fenêtre.
