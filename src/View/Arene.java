@@ -25,7 +25,8 @@ public class Arene {
     private JTextField txtSaisie;
     //Zone d'affichage du t'chat
     private JTextArea txtChat;
-
+    
+    /*Vérifier pour extends JPanel */
     public Arene() {
         //Caractéristiques Fenêtre principale
         frmArene = new JFrame();
@@ -53,7 +54,7 @@ public class Arene {
 
         txtChat = new JTextArea();
         jspChat.setViewportView(txtChat);
-
+  
         frmArene.setVisible(true);
         System.out.println("Essai vue arene");
     }

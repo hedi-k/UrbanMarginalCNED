@@ -13,6 +13,8 @@ import javax.swing.JTextField;
  *
  * @author hedi
  */
+
+/*Vérifier pour extends JPanel */
 public class EntreeJeu extends JPanel {
 
     //Propriétés:

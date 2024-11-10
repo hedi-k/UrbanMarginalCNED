@@ -6,7 +6,7 @@ import View.*;
  * @author hedi
  */
 public class Controller {
-    Arene essai;
+    ChoixJoueur essai;
 
     /**
      * @param args the command line arguments
@@ -14,11 +14,11 @@ public class Controller {
     public static void main(String[] args) {
         System.out.println("Appel du controleur.");    
         Controller controller = new Controller();
-        controller.arene();
+        controller.choix();
     }
     
-    public void arene(){
-    essai = new Arene();
+    public void choix(){
+    essai = new ChoixJoueur();
     }
     
 }
