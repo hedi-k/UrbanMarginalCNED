@@ -18,7 +18,7 @@ import javax.swing.JTextField;
     En Java, JPanel et JFrame sont deux composants de l'interface graphique (GUI) fournis par la bibliothèque Swing
     JFrame est une fenêtre principale qui peut contenir d'autres composants Swing. C'est le conteneur de niveau supérieu
     JPanel est un conteneur léger qui peut contenir d'autres composants Swing. Il est souvent utilisé pour organiser des composants à l'intérieur d'un JFrame
-*/
+ */
 public class EntreeJeu extends JFrame {
 
     //Propriétés:
@@ -63,7 +63,7 @@ public class EntreeJeu extends JFrame {
         });
         btnStart.setBounds(186, 7, 89, 23);
         add(btnStart);
-        
+
         JButton btnExit = new JButton("Exit");
         btnExit.addMouseListener(new MouseAdapter() {
             @Override
@@ -73,7 +73,7 @@ public class EntreeJeu extends JFrame {
         });
         btnExit.setBounds(186, 91, 89, 23);
         add(btnExit);
-        
+
         JButton btnConnect = new JButton("Connect");
         btnConnect.addMouseListener(new MouseAdapter() {
             @Override
@@ -101,10 +101,12 @@ public class EntreeJeu extends JFrame {
     private void btnStart_clic() {
         this.controller.evenementEntreeJeu("serveur");
     }
+
     //Action du btn Connect
-    private void btnConnect_clic(){
-        controller.evenementEntreeJeu("IP");
+    private void btnConnect_clic() {
+        controller.evenementEntreeJeu(txtIp.getText());
     }
+
     //Action du btn Exit
     private void btnExit_clic() {
         System.exit(0);

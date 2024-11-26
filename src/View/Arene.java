@@ -14,10 +14,9 @@ import javax.swing.JTextField;
  *
  * @author hedi
  */
-public class Arene {
+public class Arene extends JFrame {
 
     //Propriétés:
-    private JFrame frmArene;
     //Largeur de la fenêtre.
     private int windowWidth = 815;
     //Hauteur de la fenêtre.
@@ -27,38 +26,36 @@ public class Arene {
     //Zone d'affichage du t'chat
     private JTextArea txtChat;
     Controller controller;
-    
+
     /*Vérifier pour extends JPanel */
     public Arene(Controller controller) {
+        System.out.println("Appel de la vue Arene");
+        this.controller = controller;
         //Caractéristiques Fenêtre principale
-        frmArene = new JFrame();
-        frmArene.setLayout(null);
-        frmArene.setSize(windowWidth, windowHeight);
-        frmArene.setLocationRelativeTo(null);
-        frmArene.setResizable(false);
+        setLayout(null);
+        setSize(windowWidth, windowHeight);
+        setLocationRelativeTo(null);
+        setResizable(false);
 
         JLabel lblFond = new JLabel("");
         String chemin = "media/fonds/fondarene.jpg";
         URL resource = getClass().getClassLoader().getResource(chemin);
         lblFond.setIcon(new ImageIcon(resource));
         lblFond.setBounds(0, 0, 800, 600);
-        frmArene.add(lblFond);
+        add(lblFond);
 
         txtSaisie = new JTextField();
         txtSaisie.setBounds(0, 600, 800, 25);
-        frmArene.add(txtSaisie);
+        add(txtSaisie);
         txtSaisie.setColumns(10);
 
         JScrollPane jspChat = new JScrollPane();
         jspChat.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
         jspChat.setBounds(0, 625, 800, 140);
-        frmArene.add(jspChat);
+        add(jspChat);
 
         txtChat = new JTextArea();
         jspChat.setViewportView(txtChat);
-  
-        frmArene.setVisible(true);
-        System.out.println("Appel de la vue Arene");
-        this.controller = controller;
+
     }
 }
