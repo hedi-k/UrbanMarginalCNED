@@ -1,5 +1,6 @@
 package View;
 
+import Controller.Controller;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -25,9 +26,10 @@ public class Arene {
     private JTextField txtSaisie;
     //Zone d'affichage du t'chat
     private JTextArea txtChat;
+    Controller controller;
     
     /*Vérifier pour extends JPanel */
-    public Arene() {
+    public Arene(Controller controller) {
         //Caractéristiques Fenêtre principale
         frmArene = new JFrame();
         frmArene.setLayout(null);
@@ -56,6 +58,7 @@ public class Arene {
         jspChat.setViewportView(txtChat);
   
         frmArene.setVisible(true);
-        System.out.println("Essai vue arene");
+        System.out.println("Appel de la vue Arene");
+        this.controller = controller;
     }
 }
